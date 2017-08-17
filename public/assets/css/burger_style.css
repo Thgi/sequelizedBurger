@@ -1,0 +1,117 @@
+body{
+  background-color: yellow;
+}
+
+h1, h2 ,p{
+  font-family: sans-serif;
+}
+
+.row {
+  text-align: center;
+}
+
+#burgr {
+  height: 200px;
+}
+
+/*What do you want to eat?*/
+h2{
+font-family: sans-serif;
+background-color: white;
+font-size: 20px;
+
+}
+/*Burgers not in my stomach yet!*/
+h3{
+	font-family: sans-serif;
+background-color: white;
+font-size: 20px;
+
+}
+
+/*I ate these burgers!!!*/
+h4{
+font-family: sans-serif;
+background-color: white;
+font-size: 20px;
+}
+
+
+
+input[type=text] {
+  display:block;
+  margin:auto;
+    width: 140px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 10px 18px 10px 38px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 70%;
+}
+
+.button {
+  display: block;
+  margin:auto;
+  margin-top: 5px;
+
+  padding: 4px 4px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: yellow;
+  background-color: #A7A25E;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #CEC976;
+}
+
+.button:hover {background-color: gray}
+
+.button:active {
+  background-color: gray;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.devour {
+  display: center;
+  margin:auto;
+  margin-top: 20px;
+  margin-left: 0%;
+  margin-bottom: 20px;
+
+  padding: 2px 3px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: yellow;
+  background-color: #A7A25E;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #CEC976;
+}
+
+.devour:hover {
+  background-color: gray;
+
+}
+
+.devour:active {
+  background-color: gray;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

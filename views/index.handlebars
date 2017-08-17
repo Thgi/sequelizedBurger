@@ -1,0 +1,49 @@
+<div class="row" id="top">
+  <img id="burgr" src="/assets/img/burgure.jpg">
+  <div class="col-md-12">
+    <h1>Eat-Da-Burger!</h1>
+  </div>
+
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-4" id="add-burger">
+      <form class="add-burger" action="/api/burgers" method="POST">
+        <div class="form-group">
+        <h2 id="instructions" class="form-text text-muted">What do you want to eat?</h2>  
+        <br>
+        <input type="text" name="burger_name" class="form-control" id="burger-input" placeholder="Enter burger name here.">
+        </div>
+        <br>
+       <button class="button" type="submit">Submit</button>
+      </form>
+    </div>
+
+
+  <div class="col-md-4" id="not-devoured">
+    <h3 id="to-devour-h">Burgers not in my stomach yet!</h3>
+    {{#each burgers}} {{#unless this.devoured}}
+    <p>
+      <form class="devour-form" action="/api/{{this.id}}?_method=PUT" method="POST">
+        {{this.id}}. {{this.burger_name}}
+        <br>
+        <br>
+        <input type="hidden" name="id" value={{this.id}}>
+        <button class="devour" type="submit">Devour it!</button>
+      </form>
+    </p>
+    {{/unless}} {{/each}}
+  </div>
+
+  <div class="col-md-4" id="devoured">
+    <h4 id="devoured-h">I ate these burgers!!!</h4>
+    {{#each burgers}} {{#if this.devoured}}
+    <p class="p-devoured">{{this.id}}. {{this.burger_name}}</p>
+    {{/if}} {{/each}}
+  </div>
+
+  <div class="col-md-1"></div>
+
+</div>
